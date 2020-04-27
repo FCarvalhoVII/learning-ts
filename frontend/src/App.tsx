@@ -1,6 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react'
+import { ButtonGradient } from 'components-react-lib-styled'
+import { Link } from 'react-router-dom'
+
 import api from './services/api'
 import User from './components/User'
+import './App.css'
 
 interface IUser {
     id: number
@@ -20,6 +24,9 @@ function App() {
     return (
         <div className="App">
             { users.map(user => <User key={user.id} user={user} />) }
+            <Link to="/products">
+                <ButtonGradient>Produtos</ButtonGradient>
+            </Link>
         </div>
     );
 }
