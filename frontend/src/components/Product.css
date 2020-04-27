@@ -1,0 +1,31 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    text-align: center;
+    border: groove 1px #00008d;
+    background-color: #00008d;
+    margin: 10px;
+
+    border-radius: 5px;
+}
+
+thead {
+    background-color: #6d6dd4;
+    color: #fff;
+}
+
+tbody {
+    background-color: #f0efff;
+}
+
+th {
+    width: 90px;
+    padding: 10px;
+}
+
+td {
+    padding: 10px;
+}
