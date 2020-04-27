@@ -1,0 +1,8 @@
+[
+    { "id": 1, "name": "Notebook", "price": 2000 },
+    { "id": 2, "name": "Celular", "price": 900 },
+    { "id": 3, "name": "Televisão", "price": 1600 },
+    { "id": 4, "name": "Geladeira", "price": 2800 },
+    { "id": 5, "name": "Console", "price": 1500 },
+    { "id": 6, "name": "Carro", "price": 70000 }
+]
