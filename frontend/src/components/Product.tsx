@@ -1,5 +1,10 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
+import { ButtonGradient } from 'components-react-lib-styled'
+
 import api from '../services/api'
+
+import './Product.css'
 
 interface IProduct {
     id: number
@@ -17,15 +22,34 @@ function Product() {
     }, [])
 
     return (
-        <ul>
-            <strong>Produtos:</strong>
-            { products.map(product => 
-                <li key={product.id}>
-                    <strong>Nome:</strong> {product.name}, 
-                    <strong> Preço:</strong> {product.price}
-                </li>
-            ) }
-        </ul>
+        <React.Fragment>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Preço</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    { products.map(product => (
+                        <tr key={product.id}>
+                            <td>{product.name}</td>
+                            <td>
+                                {
+                                    Intl.NumberFormat('pt-BR', { 
+                                        style: 'currency', 
+                                        currency: 'BRL' 
+                                    }).format(product.price)
+                                } 
+                            </td>
+                        </tr>
+                    )) }
+                </tbody>
+            </table>
+            <Link to="/">
+                <ButtonGradient>Usuários</ButtonGradient>
+            </Link>
+        </React.Fragment>
     )
 }
 
